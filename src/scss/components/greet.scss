@@ -1,0 +1,9 @@
+@import '../common/colors.scss';
+@import '../common/fonts.scss';
+
+.greet {
+  height: 900px;
+  background-color: $black;
+  padding-top: 190px;
+  color: $white;
+}
