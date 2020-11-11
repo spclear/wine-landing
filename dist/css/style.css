@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'ChocolateBox';
+  src: url("../assets/fonts/ChocolateBox.eot");
+  src: url("../assets/fonts/ChocolateBox.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/ChocolateBox.woff2") format("woff2"), url("../assets/fonts/ChocolateBox.woff") format("woff"), url("../assets/fonts/ChocolateBox.ttf") format("truetype"), url("../assets/fonts/ChocolateBox.svg#ChocolateBox") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: ChocolateBox;
+  font-size: 14px;
+}
+
+body h2 {
+  font-family: 'Poppins';
+  font-weight: 400;
+}
