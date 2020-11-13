@@ -1,0 +1,5 @@
+@mixin text-config($font-size, $line-height, $margin-bottom) {
+  font-size: $font-size;
+  line-height: $line-height;
+  margin-bottom: $margin-bottom;
+}

@@ -1,9 +1,53 @@
 @import '../common/colors.scss';
 @import '../common/fonts.scss';
+@import '../common/text.scss';
 
 .greet {
-  height: 900px;
   background-color: $black;
   padding-top: 190px;
   color: $white;
+  font-weight: 300;
+  
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__subtitle {
+    @include text-config(24px, 14px, 32px);
+  }
+
+  &__title {
+    @include text-config(96px, 56px, 24px);
+    span {
+      color: $yellow;
+    }
+  }
+
+  &__description {
+    font-family: Poppins;
+    max-width: 750px;
+    @include text-config(16px, 24px, 35px);
+  }
+
+  &__read-more {
+    color: $yellow;
+    font-family: ChocolateBox;
+    padding-bottom: 8px;
+    border: none;
+    background-color: transparent;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 16px;
+    line-height: 9px;
+    letter-spacing: 0em;
+    border-bottom: 1px solid $yellow;
+  }
+
+  &__wine-img {
+    width: 470px;
+  }
 }
