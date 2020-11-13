@@ -3,5 +3,141 @@
 @import '../common/fonts.scss';
 
 .new-wine {
-  background-color: #18191A;
+  background-color: $dark-gray;
+  padding: 267px 0 227px;
+  color: $white;
+  font-family: Poppins;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__title {
+    font-size: 20px;
+    line-height: 34px;
+    letter-spacing: 0.35em;
+    font-weight: 400;
+    margin-bottom: 47px;
+  }
+
+  &__info {
+    width: 530px;
+  }
+
+  .item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &__title {
+      font-family: ChocolateBox;
+      font-weight: normal;
+      color: $yellow;
+      @include text-config(74px, 43px, 12px)
+    }
+    
+    &__creator {
+      font-weight: 400;
+      @include text-config(36px, 170%, 52px);
+    }
+
+    &__description {
+      font-weight: 300;
+      @include text-config(18px, 200%, 64px)
+    }
+
+    &__more {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__button-more {
+      padding: 23px 48px;
+      min-width: 230px;
+      text-align: center;
+      font-weight: 500;
+      @include text-config(24px, 100%, 0);
+      background-color: transparent;
+      border: 1px solid $yellow;
+      color: $white;
+      transition: background-color .3s, color .3s;
+
+      &:hover {
+        background-color: $yellow;
+        color: $dark-gray;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .slider {
+    height: 500px;
+    width: 570px;
+    position: relative;
+    border: 10px solid $yellow;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 374px;
+      height: 374px;
+      background-color: $yellow;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+    }
+
+    &__content-image {
+      z-index: 20;
+    }
+
+    &__button {
+      position: absolute;
+      height: 65px;
+      background-color: $dark-gray;
+      border: none;
+      color: $white;
+      font-weight: 500;
+      padding-bottom: 10px;
+
+      @include text-config(20px, 60px, 0);
+
+      &:hover {
+        color: $yellow;
+        cursor: pointer;
+
+        &::before {
+          background-color: $yellow;
+        }
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        bottom: 20px;
+        width: 100%;
+        height: 1px;
+        background-color: $white;
+      } 
+    }
+
+    .prev {
+      left: 0;
+      top: 50%;
+      transform: translate(-60%, -50%);
+    }
+
+    .next {
+      right: 0;
+      top: 50%;
+      transform: translate(60%, -50%);
+    }
+  }
 }

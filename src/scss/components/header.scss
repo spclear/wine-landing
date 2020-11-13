@@ -8,7 +8,6 @@
   background-color: #fff;
 }
 
-
 .header {
   height: 150px;
   background-color: $black;
@@ -48,10 +47,22 @@
       &-item {
         margin-left: 46px;
       }
+
+      &-link {
+        transition: color .3s;
+
+        &:hover {
+          color: $yellow;
+        }
+      }
     }
 
     &-search, &-bag {
       margin-left: 35px;
+
+      &:hover {
+        animation: pulse 1s;
+      }
     }
   }
   
@@ -80,6 +91,11 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+    }
+
+    &-link:hover {
+      color: $yellow;
+      text-decoration: underline;
     }
   }
 }
