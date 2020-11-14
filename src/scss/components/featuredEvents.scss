@@ -1,0 +1,106 @@
+@import '../common/colors.scss';
+@import '../common/fonts.scss';
+@import '../common/text.scss';
+
+.featured {
+  padding: 0 0 120px;
+  color: $white;
+  font-family: 'Poppins';
+  background-color: $black;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__title {
+    font-family: 'ChocolateBox';
+    color: $white;
+    @include text-config(48px, 28px, 58px);
+
+    span {
+      color: $yellow;
+    }
+  }
+  
+  &__slider {
+    position: relative;
+    .item {
+      display: flex;
+      align-items: stretch;
+      height: 410px;
+
+      &__image {
+        width: 370px;
+        object-fit: cover;
+      }
+
+      &__info {
+        background-color: $dark-gray;
+        padding: 60px 260px 60px 30px;
+      }
+
+      &__title {
+        @include text-config(24px, 36px, 10px);
+      }
+
+      &__date, &__description {
+        @include text-config(18px, 27px, 44px);
+        font-weight: 300;
+      }
+
+      &__read-more {
+        font-family: 'ChocolateBox';
+        @include text-config(18px, 10px, 0);
+        color: $yellow;
+        background: none;
+        border: none;
+        position: relative;
+        cursor: pointer;
+
+        &::before {
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 1px;
+          background-color: $yellow;
+          bottom: -4px;
+          transition: opacity .3s;
+        }
+
+        &:hover::before {
+          opacity: 0;
+        }
+      }
+    }
+
+    .prev, .next {
+      width: 65px;
+      height: 65px;
+      border: 1.5px solid $yellow;
+      border-radius: 50%;
+      background-color: transparent;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+
+      i {
+        color: $yellow;
+        font-size: 34px;
+      }
+    }
+
+    .prev {
+      left: -130px;
+    }
+    .next {
+      right: -130px;
+    }
+  }
+}
