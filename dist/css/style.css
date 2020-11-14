@@ -533,7 +533,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  z-index: 187;
 }
 
 .review__title {
@@ -561,6 +560,7 @@
   border: 5px solid #fff;
   overflow: hidden;
   margin-bottom: 30px;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
 }
 
 .review__slider .item__photo {
@@ -599,6 +599,105 @@
 }
 
 .review .slider__nav-item_active {
+  background-color: #E2B024;
+}
+
+@font-face {
+  font-family: 'ChocolateBox';
+  src: url("../assets/fonts/ChocolateBox.eot");
+  src: url("../assets/fonts/ChocolateBox.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/ChocolateBox.woff2") format("woff2"), url("../assets/fonts/ChocolateBox.woff") format("woff"), url("../assets/fonts/ChocolateBox.ttf") format("truetype"), url("../assets/fonts/ChocolateBox.svg#ChocolateBox") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.offer {
+  background-color: #000;
+  color: #fff;
+  padding: 160px 0 155px;
+}
+
+.offer__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.offer__title {
+  font-family: 'ChocolateBox';
+  color: #fff;
+  font-size: 48px;
+  line-height: 28px;
+  margin-bottom: 100px;
+}
+
+.offer__title span {
+  color: #E2B024;
+}
+
+.offer .slider__items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.offer .slider__items .item {
+  width: 370px;
+  height: 560px;
+  margin: 0 15px;
+  position: relative;
+  cursor: pointer;
+}
+
+.offer .slider__items .item_active {
+  height: 637px;
+}
+
+.offer .slider__items .item__image {
+  height: 100%;
+  width: 100%;
+}
+
+.offer .slider__items .item__info {
+  position: absolute;
+  bottom: 25px;
+  left: 25px;
+}
+
+.offer .slider__items .item__title {
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 14px;
+  margin-bottom: 10px;
+}
+
+.offer .slider__items .item__price {
+  font-family: 'Poppins';
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 54px;
+  margin-bottom: 0;
+}
+
+.offer .slider__nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.offer .slider__nav-item {
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border-radius: 50%;
+  margin: 0 5px;
+  transition: background-color .3s;
+  cursor: pointer;
+}
+
+.offer .slider__nav-item_active {
   background-color: #E2B024;
 }
 

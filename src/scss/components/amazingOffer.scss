@@ -1,0 +1,89 @@
+@import '../common/colors.scss';
+@import '../common/fonts.scss';
+@import '../common/text.scss';
+
+.offer {
+  background-color: $black;
+  color: $white;
+  padding: 160px 0 155px;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__title {
+    font-family: 'ChocolateBox';
+    color: $white;
+    @include text-config(48px, 28px, 100px);
+
+    span {
+      color: $yellow;
+    }
+  }
+
+  .slider {
+    &__items {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 50px;
+
+      .item {
+        width: 370px;
+        height: 560px;
+        margin: 0 15px;
+        position: relative;
+        cursor: pointer;
+
+        &_active {
+          height: 637px;
+        }
+
+        &__image {
+          height: 100%;
+          width: 100%;
+        }
+
+        &__info {
+          position: absolute;
+          bottom: 25px;
+          left: 25px;
+        }
+
+        &__title {
+          font-weight: 300;
+          @include text-config(24px, 14px, 10px);
+        }
+
+        &__price {
+          font-family: 'Poppins';
+          font-weight: 700;
+          @include text-config(36px, 54px, 0);
+        }
+      }
+    }
+
+    &__nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &-item {
+        width: 20px;
+        height: 20px;
+        background-color: $white;
+        border-radius: 50%;
+        margin: 0 5px;
+        transition: background-color .3s;
+        cursor: pointer;
+
+        &_active {
+          background-color: $yellow;
+        }
+      }
+    }
+  }
+}
