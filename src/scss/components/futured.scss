@@ -1,0 +1,152 @@
+@import '../common/colors.scss';
+@import '../common/fonts.scss';
+@import '../common/text.scss';
+
+.futured {
+  background-color: $black;
+  padding: 150px 0;
+  color: $white;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__title {
+    font-family: 'ChocolateBox';
+    color: $white;
+    text-align: center;
+    @include text-config(48px, 28px, 90px);
+    
+    span {
+      color: $yellow;
+    }
+  }
+
+  &__filters {
+    width: 420px;
+    margin-bottom: 90px;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 1px;
+      background-color: $white;
+    }
+
+    &-list {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &-item {
+      font-family: Poppins;
+      color: $white;
+      font-weight: 400;
+      cursor: pointer;
+      transition: color .3s;
+      @include text-config(24px, 36px, 0);
+      
+      &:hover {
+        color: $yellow;
+      }
+    }
+  }
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-between;
+  }
+
+  &__item {
+    max-width: 23%;
+    flex: 0 0 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 100px;
+    position: relative;
+
+    &-image {
+      height: 350px;
+      margin-bottom: 18px;
+    }
+
+    &-title {
+      align-self: flex-start;
+      padding-left: 40px;
+      @include text-config(24px, 14px, 10px);
+    }
+    
+    &-price {
+      align-self: flex-start;
+      padding-left: 40px;
+      font-family: 'Poppins';
+      font-weight: 300;
+      display: flex;
+      align-items: center;
+      color: $yellow;
+      @include text-config(24px, 36px, 0);
+    }
+
+    &-discount {
+      @include text-config(16px, 24px, 0);
+      text-decoration: line-through;
+      margin-right: 4px;
+    }
+
+    &-label {
+      position: absolute;
+      top: 20px;
+      left: 0;
+      width: 80px;
+      height: 40px;
+      background-color: $yellow;
+      color: $black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Poppins';
+      font-weight: 500;
+      @include text-config(14px, 21px,   0);
+    }
+  }
+
+
+  &__more {
+    color: $yellow;
+    font-family: 'ChocolateBox';
+    position: relative;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding-bottom: 4px;
+
+    @include text-config(18px, 10px, 0);
+
+    &::before {
+      content: '';
+      opacity: 1;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 1px;
+      background-color: $yellow;
+      transition: opacity .3s;
+    }
+
+    &:hover::before {
+      opacity: 0;
+    }
+  }
+}
