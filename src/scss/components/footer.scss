@@ -1,0 +1,94 @@
+@import '../common/colors.scss';
+@import '../common/text.scss';
+@import '../common/fonts.scss';
+
+.footer {
+  padding: 134px 0 0;
+  background-color: $black;
+  font-family: 'Poppins';
+  color: $white;
+
+  // &__container {
+  // }
+
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 92px;
+
+    &__links-block-title {
+      font-family: 'ChocolateBox';
+      color: $yellow;
+      font-weight: 300;
+      @include text-config(24px, 14px, 42px);
+    }
+
+    &__item {
+      font-weight: 300;
+      @include text-config(16px, 24px, 15px);
+
+      &:hover a {
+        text-decoration: underline;
+      }
+    }
+
+    &__contacts {
+      &-list-item {
+        display: flex;
+        align-items: center;
+        font-weight: 300;
+        @include text-config(18px, 170%, 24px);
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+
+        span {
+          margin-left: 20px;
+        }
+      }
+    }
+
+    .socials {
+      display: flex;
+      align-items: center;
+      margin-bottom: 30px;
+
+      &__item {
+        margin-right: 44px;
+      }
+
+      &__link {
+        font-size: 24px;
+        color: $yellow;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__copyright {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 22px 0 44px;
+    font-weight: 300;
+    
+    @include text-config(16px, 170%, 0);
+    
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      background-color: $white;
+      top: 0;
+    }
+
+    span {
+      font-weight: 400;
+      font-size: 20px;
+      margin-right: 7px;
+    }
+  }
+}

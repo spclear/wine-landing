@@ -17,10 +17,12 @@
   }
 
   &__subtitle {
+    font-weight: 400;
     @include text-config(24px, 14px, 32px);
   }
 
   &__title {
+    font-weight: 400;
     @include text-config(96px, 56px, 24px);
     span {
       color: $yellow;

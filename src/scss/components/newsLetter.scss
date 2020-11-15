@@ -68,7 +68,7 @@
     @include text-config(18px, 27px, 0);
 
     &:hover span {
-      animation: swing 1s;
+      animation: swing .5s;
     }
   }
 }
