@@ -1,0 +1,148 @@
+@import '../common/colors.scss';
+@import '../common/fonts.scss';
+@import '../common/text.scss';
+
+.contact-us {
+  padding: 0 0 150px;
+  background-color: $black;
+  color: $white;
+  font-family: 'Poppins';
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__title {
+    font-family: 'ChocolateBox';
+    color: $white;
+    @include text-config(48px, 28px, 100px);
+
+    span {
+      color: $yellow;
+    }
+  }
+
+  &__content {
+    display: flex;
+    width: 100%;
+  }
+
+  .details {
+    width: 470px;
+    margin-right: 35px;
+
+    &__info {
+      font-weight: 300;
+      @include text-config(18px, 200%, 77px);
+    }
+
+    &__contacts {
+      margin-bottom: 60px;
+
+      &-list-item {
+        display: flex;
+        align-items: center;
+        font-weight: 300;
+        @include text-config(18px, 170%, 42px);
+
+        span {
+          margin-left: 30px;
+        }
+      }
+    }
+
+    .socials {
+      display: flex;
+      align-items: center;
+
+      &__item {
+        margin-right: 56px;
+        &:hover{
+          animation: swing 1.5s;
+        }
+      }
+
+      &__link {
+        font-size: 48px;
+        color: $yellow;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__form {
+    flex-grow: 1;
+  }
+
+  &__form-field {
+    margin-bottom: 30px;
+    position: relative;
+    border: 1px solid $white;
+    height: 65px;
+    padding: 20px 25px;
+
+    label {
+      position: absolute;
+      left: 40px;
+      background-color: $black;
+      top: -20px;
+      padding: 0 7px;
+      cursor: pointer;
+      @include text-config(24px, 36px, 0);
+    }
+  }
+  
+  &__form-input, &__form-input:focus {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    width: 100%;
+    height: 100%;
+    color: $white;
+    font-weight: 300;
+    font-family: 'Poppins';
+    
+    @include text-config(18px, 24px, 0);
+  }
+
+  .form-textarea {
+    height: 133px;
+
+    textarea {
+      width: 100%;
+      height: 100%;
+      resize: none;
+      color: $white;
+      scrollbar-width: none;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+  }
+
+  &__send {
+    width: 200px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $yellow;
+    color: $dark-gray;
+    font-family: 'Poppins';
+    font-weight: 500;
+    border: 1px solid $yellow;
+    outline: none;
+    transition: background-color .3s, color .3s;
+    cursor: pointer;
+    @include text-config(36px, 170%, 0);
+
+    &:hover {
+      color: $yellow;
+      background-color: $black;
+    }
+  }
+}

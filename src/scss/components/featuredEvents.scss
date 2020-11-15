@@ -3,7 +3,7 @@
 @import '../common/text.scss';
 
 .featured {
-  padding: 0 0 120px;
+  padding: 0 0 150px;
   color: $white;
   font-family: 'Poppins';
   background-color: $black;
@@ -27,6 +27,7 @@
   
   &__slider {
     position: relative;
+
     .item {
       display: flex;
       align-items: stretch;
