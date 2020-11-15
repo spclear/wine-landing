@@ -1,0 +1,74 @@
+@import '../common/colors.scss';
+@import '../common/fonts.scss';
+@import '../common/text.scss';
+
+.subscribe {
+  padding: 57px 0 62px;
+  background-color: $dark-gray;
+  color: $white;
+  font-family: 'Poppins';
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    font-family: 'ChocolateBox';
+    color: $white;
+    @include text-config(48px, 28px, 24px);
+
+    span {
+      color: $yellow;
+    }
+  }
+  
+  &__description {
+    font-weight: 300;
+    text-align: center;
+    @include text-config(18px, 27px, 70px);
+  }
+
+  &__form {
+    display: flex;
+    width: 570px;
+    height: 65px;
+  }
+
+  &__email-input {
+    padding: 0 34px;
+    flex-grow: 1;
+    color: $white;
+    outline: none;
+    border: none;
+    background-color: $black;
+    font-weight: 300;
+    font-family: 'Poppins';
+    color: $white;
+
+    @include text-config(18px, 27px, 0);
+    
+    &::placeholder {
+      color: $white;
+    }
+  }
+  
+  &__confirm-button {
+    width: 128px;
+    font-family: 'Poppins';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $yellow;
+    border: 1px solid $yellow;
+    transition: background-color .3s, color .3s;
+    cursor: pointer;
+
+    @include text-config(18px, 27px, 0);
+
+    &:hover span {
+      animation: swing 1s;
+    }
+  }
+}

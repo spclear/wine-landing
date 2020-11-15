@@ -61,7 +61,7 @@
       &__item {
         margin-right: 56px;
         &:hover{
-          animation: swing 1.5s;
+          animation: swing .6s;
         }
       }
 
@@ -125,11 +125,11 @@
   }
 
   &__send {
-    width: 200px;
-    height: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 200px;
+    height: 80px;
     background-color: $yellow;
     color: $dark-gray;
     font-family: 'Poppins';
@@ -138,6 +138,7 @@
     outline: none;
     transition: background-color .3s, color .3s;
     cursor: pointer;
+    
     @include text-config(36px, 170%, 0);
 
     &:hover {
