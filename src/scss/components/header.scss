@@ -1,10 +1,9 @@
 @import '../common/colors.scss';
-@import '../common/fonts.scss';
 
 @mixin burger-line {
   display: block;
   width: 100%;
-  height: 3px;
+  height: 2px;
   background-color: #fff;
 }
 
@@ -12,6 +11,10 @@
   height: 150px;
   background-color: $black;
   color: $white;
+
+  @media screen and (max-width: $large) {
+    height: auto;
+  }
 
   &__top {
     height: 95px;
@@ -23,8 +26,12 @@
     font-size: 12px;
     position: relative;
 
+    @media screen and (max-width: $large) {
+      flex-direction: column;
+      justify-content: space-evenly;
+    }
+
     // .header__free-ship {
-      
     // }
 
     .header__logo {
@@ -32,6 +39,10 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+
+      @media screen and (max-width: $large) {
+        display: none;
+      }
     }
 
     &-nav {
@@ -39,13 +50,34 @@
       align-items: center;
       justify-content: space-between;
 
+      @media screen and (max-width: $large) {
+        border-top: 1px solid $white;
+        border-bottom: 1px solid $white;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+        justify-content: flex-end;
+      }
+
       &-list {
         display: flex;
         align-items: center;
+
+        @media screen and (max-width: $large) {
+          margin-right: auto;
+        }
       }
 
       &-item {
         margin-left: 46px;
+        @media screen and (max-width: $medium) {
+          margin-left: 5px;
+          margin-right: 30px;
+        }
+        @media screen and (max-width: $small) {
+          margin-left: 5px;
+          margin-right: 15px;
+        }
       }
 
       &-link {
@@ -59,6 +91,13 @@
 
     &-search, &-bag {
       margin-left: 35px;
+
+      @media screen and (max-width: $medium) {
+        margin-left: 30px;
+      }
+      @media screen and (max-width: $small) {
+        margin-left: 15px;
+      }
 
       &:hover {
         animation: pulse 1s;
@@ -75,6 +114,13 @@
     flex-direction: column;
     cursor: pointer;
     position: relative;
+
+    @media screen and (max-width: $medium) {
+      margin-left: 30px;
+    }
+    @media screen and (max-width: $small) {
+      margin-left: 15px;
+    }
     
     span {
       @include burger-line();
@@ -82,20 +128,72 @@
   }
 
   &__nav {
+    position: relative;
     height: 55px;
     border-top: 1px solid rgba(255, 255, 255, 0.6);
     border-bottom: 1px solid rgba(255, 255, 255, 0.6);
     
+    @media screen and (max-width: $large) {
+      // display: none;
+      position: fixed;
+      background-color: $dark-gray;
+      width: 500px;
+      height: 100vh;
+      right: 0;
+      top: 0;
+      box-shadow: 0 -10px 10px 5px rgba(0, 0, 0, .6);
+      transform: translateX(100%);
+      transition: transform .2s ease-out;
+
+      &.active {
+        transform: translateX(0);
+      }
+    }
+
+    @media screen and (max-width: $small) {
+      width: 100vw;
+    }
+
     &-list {
       height: 100%;
       display: flex;
       justify-content: space-between;
       align-items: center;
+
+      @media screen and (max-width: $large) {
+        flex-direction: column;
+        justify-content: center;
+
+      }
     }
 
-    &-link:hover {
-      color: $yellow;
-      text-decoration: underline;
+    &-item {
+      @media screen and (max-width: $large) {
+        padding: 15px 0;
+      }
+    }
+
+    &-link {
+      @media screen and (max-width: $large) {
+        font-size: 1.3em;
+      }
+
+      &:hover {
+        color: $yellow;
+        text-decoration: underline;
+      }
+    }
+
+    &-close {
+      display: none;
+      position: absolute;
+      top: 30px;
+      right: 30px;
+      font-size: 50px;
+
+      @media screen and (max-width: $large) {
+        display: flex;
+      }
     }
   }
 }

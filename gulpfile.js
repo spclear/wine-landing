@@ -5,6 +5,7 @@ const fileInclude = require('gulp-file-include');
 const sass = require('gulp-sass');
 const beautify = require('gulp-beautify');
 const autoprefixer = require('gulp-autoprefixer');
+const combineQueries = require('gulp-group-css-media-queries');
 
 const distFolder = './dist/';
 const srcFolder = './src/';
@@ -29,6 +30,7 @@ function css() {
       .pipe(autoprefixer({
         cascade: false
       }))
+      .pipe(combineQueries())
       .pipe(gulp.dest(distFolder + 'css'))
       .pipe(browsersync.stream())
   )
@@ -95,6 +97,7 @@ function prodCss() {
       .pipe(autoprefixer({
         cascade: false
       }))
+      .pipe(combineQueries())
       .pipe(gulp.dest(distFolder + 'css'))
       .pipe(browsersync.stream())
   )

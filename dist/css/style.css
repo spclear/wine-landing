@@ -7,13 +7,46 @@
   font-display: swap;
 }
 
-@font-face {
-  font-family: 'ChocolateBox';
-  src: url("../assets/fonts/ChocolateBox.eot");
-  src: url("../assets/fonts/ChocolateBox.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/ChocolateBox.woff2") format("woff2"), url("../assets/fonts/ChocolateBox.woff") format("woff"), url("../assets/fonts/ChocolateBox.ttf") format("truetype"), url("../assets/fonts/ChocolateBox.svg#ChocolateBox") format("svg");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+ul {
+  list-style: none;
+}
+
+button,
+button:focus {
+  outline: none;
+}
+
+html {
+  font-size: 16px;
+  font-family: Poppins;
+}
+
+body {
+  font-family: ChocolateBox;
+  font-size: 14px;
+}
+
+body .container {
+  max-width: 1190px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+body h2 {
+  font-family: 'Poppins';
+  font-weight: 400;
+  color: #E2B024;
 }
 
 .header {
@@ -63,11 +96,13 @@
   color: #E2B024;
 }
 
-.header__top-search, .header__top-bag {
+.header__top-search,
+.header__top-bag {
   margin-left: 35px;
 }
 
-.header__top-search:hover, .header__top-bag:hover {
+.header__top-search:hover,
+.header__top-bag:hover {
   -webkit-animation: pulse 1s;
   animation: pulse 1s;
 }
@@ -86,11 +121,12 @@
 .header__burger-menu span {
   display: block;
   width: 100%;
-  height: 3px;
+  height: 2px;
   background-color: #fff;
 }
 
 .header__nav {
+  position: relative;
   height: 55px;
   border-top: 1px solid rgba(255, 255, 255, 0.6);
   border-bottom: 1px solid rgba(255, 255, 255, 0.6);
@@ -108,13 +144,12 @@
   text-decoration: underline;
 }
 
-@font-face {
-  font-family: 'ChocolateBox';
-  src: url("../assets/fonts/ChocolateBox.eot");
-  src: url("../assets/fonts/ChocolateBox.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/ChocolateBox.woff2") format("woff2"), url("../assets/fonts/ChocolateBox.woff") format("woff"), url("../assets/fonts/ChocolateBox.ttf") format("truetype"), url("../assets/fonts/ChocolateBox.svg#ChocolateBox") format("svg");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
+.header__nav-close {
+  display: none;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  font-size: 50px;
 }
 
 .greet {
@@ -183,15 +218,6 @@
   width: 470px;
 }
 
-@font-face {
-  font-family: 'ChocolateBox';
-  src: url("../assets/fonts/ChocolateBox.eot");
-  src: url("../assets/fonts/ChocolateBox.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/ChocolateBox.woff2") format("woff2"), url("../assets/fonts/ChocolateBox.woff") format("woff"), url("../assets/fonts/ChocolateBox.ttf") format("truetype"), url("../assets/fonts/ChocolateBox.svg#ChocolateBox") format("svg");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
 .new-wine {
   background-color: #18191A;
   padding: 267px 0 227px;
@@ -256,13 +282,13 @@
   min-width: 230px;
   text-align: center;
   font-weight: 500;
-  font-size: 24px;
-  line-height: 100%;
-  margin-bottom: 0;
   background-color: transparent;
   border: 1px solid #E2B024;
   color: #fff;
   transition: background-color .3s, color .3s;
+  font-size: 24px;
+  line-height: 100%;
+  margin-bottom: 0;
 }
 
 .new-wine .item__button-more:hover {
@@ -340,15 +366,6 @@
   transform: translate(60%, -50%);
 }
 
-@font-face {
-  font-family: 'ChocolateBox';
-  src: url("../assets/fonts/ChocolateBox.eot");
-  src: url("../assets/fonts/ChocolateBox.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/ChocolateBox.woff2") format("woff2"), url("../assets/fonts/ChocolateBox.woff") format("woff"), url("../assets/fonts/ChocolateBox.ttf") format("truetype"), url("../assets/fonts/ChocolateBox.svg#ChocolateBox") format("svg");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
 .futured {
   background-color: #000;
   padding: 150px 0;
@@ -408,7 +425,8 @@
   margin-bottom: 0;
 }
 
-.futured__filters-item:hover {
+.futured__filters-item:hover,
+.futured__filters-item_active {
   color: #E2B024;
 }
 
@@ -510,15 +528,6 @@
   opacity: 0;
 }
 
-@font-face {
-  font-family: 'ChocolateBox';
-  src: url("../assets/fonts/ChocolateBox.eot");
-  src: url("../assets/fonts/ChocolateBox.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/ChocolateBox.woff2") format("woff2"), url("../assets/fonts/ChocolateBox.woff") format("woff"), url("../assets/fonts/ChocolateBox.ttf") format("truetype"), url("../assets/fonts/ChocolateBox.svg#ChocolateBox") format("svg");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
 .review {
   background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../assets/img/design/review-bg.jpg");
   background-position: 50%;
@@ -602,15 +611,6 @@
 
 .review .slider__nav-item_active {
   background-color: #E2B024;
-}
-
-@font-face {
-  font-family: 'ChocolateBox';
-  src: url("../assets/fonts/ChocolateBox.eot");
-  src: url("../assets/fonts/ChocolateBox.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/ChocolateBox.woff2") format("woff2"), url("../assets/fonts/ChocolateBox.woff") format("woff"), url("../assets/fonts/ChocolateBox.ttf") format("truetype"), url("../assets/fonts/ChocolateBox.svg#ChocolateBox") format("svg");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
 }
 
 .offer {
@@ -703,15 +703,6 @@
   background-color: #E2B024;
 }
 
-@font-face {
-  font-family: 'ChocolateBox';
-  src: url("../assets/fonts/ChocolateBox.eot");
-  src: url("../assets/fonts/ChocolateBox.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/ChocolateBox.woff2") format("woff2"), url("../assets/fonts/ChocolateBox.woff") format("woff"), url("../assets/fonts/ChocolateBox.ttf") format("truetype"), url("../assets/fonts/ChocolateBox.svg#ChocolateBox") format("svg");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
 .featured {
   padding: 0 0 150px;
   color: #fff;
@@ -765,7 +756,8 @@
   margin-bottom: 10px;
 }
 
-.featured__slider .item__date, .featured__slider .item__description {
+.featured__slider .item__date,
+.featured__slider .item__description {
   font-size: 18px;
   line-height: 27px;
   margin-bottom: 44px;
@@ -798,7 +790,8 @@
   opacity: 0;
 }
 
-.featured__slider .prev, .featured__slider .next {
+.featured__slider .prev,
+.featured__slider .next {
   width: 65px;
   height: 65px;
   border: 1.5px solid #E2B024;
@@ -813,7 +806,8 @@
   cursor: pointer;
 }
 
-.featured__slider .prev i, .featured__slider .next i {
+.featured__slider .prev i,
+.featured__slider .next i {
   color: #E2B024;
   font-size: 34px;
 }
@@ -824,15 +818,6 @@
 
 .featured__slider .next {
   right: -130px;
-}
-
-@font-face {
-  font-family: 'ChocolateBox';
-  src: url("../assets/fonts/ChocolateBox.eot");
-  src: url("../assets/fonts/ChocolateBox.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/ChocolateBox.woff2") format("woff2"), url("../assets/fonts/ChocolateBox.woff") format("woff"), url("../assets/fonts/ChocolateBox.ttf") format("truetype"), url("../assets/fonts/ChocolateBox.svg#ChocolateBox") format("svg");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
 }
 
 .contact-us {
@@ -939,7 +924,8 @@
   margin-bottom: 0;
 }
 
-.contact-us__form-input, .contact-us__form-input:focus {
+.contact-us__form-input,
+.contact-us__form-input:focus {
   background-color: transparent;
   outline: none;
   border: none;
@@ -991,15 +977,6 @@
 .contact-us__send:hover {
   color: #E2B024;
   background-color: #000;
-}
-
-@font-face {
-  font-family: 'ChocolateBox';
-  src: url("../assets/fonts/ChocolateBox.eot");
-  src: url("../assets/fonts/ChocolateBox.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/ChocolateBox.woff2") format("woff2"), url("../assets/fonts/ChocolateBox.woff") format("woff"), url("../assets/fonts/ChocolateBox.ttf") format("truetype"), url("../assets/fonts/ChocolateBox.svg#ChocolateBox") format("svg");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
 }
 
 .subscribe {
@@ -1086,15 +1063,6 @@
 .subscribe__confirm-button:hover span {
   -webkit-animation: swing .5s;
   animation: swing .5s;
-}
-
-@font-face {
-  font-family: 'ChocolateBox';
-  src: url("../assets/fonts/ChocolateBox.eot");
-  src: url("../assets/fonts/ChocolateBox.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/ChocolateBox.woff2") format("woff2"), url("../assets/fonts/ChocolateBox.woff") format("woff"), url("../assets/fonts/ChocolateBox.ttf") format("truetype"), url("../assets/fonts/ChocolateBox.svg#ChocolateBox") format("svg");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
 }
 
 .footer {
@@ -1190,43 +1158,310 @@
   margin-right: 7px;
 }
 
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+@media screen and (max-width: 1200px) {
+  .new-wine {
+    padding: 110px 0 150px;
+    position: relative;
+  }
+
+  .new-wine__container {
+    justify-content: space-evenly;
+  }
+
+  .new-wine__info {
+    width: 480px;
+  }
+
+  .new-wine .item__title {
+    font-size: 68px;
+    margin-bottom: 10px;
+  }
+
+  .new-wine .item__creator {
+    margin-bottom: 40px;
+    font-size: 30px;
+  }
+
+  .new-wine .slider {
+    width: 380px;
+    height: 380px;
+    border-width: 5px;
+  }
+
+  .new-wine .slider::before {
+    width: 250px;
+    height: 250px;
+  }
+
+  .new-wine .slider__content-image {
+    height: 500px;
+  }
+
+  .new-wine .slider__content-image {
+    height: 350px;
+  }
+
+  .new-wine .slider__content-image {
+    height: 280px;
+  }
 }
 
-a {
-  text-decoration: none;
-  color: #fff;
+@media screen and (max-width: 992px) {
+  .header {
+    height: auto;
+  }
+
+  .header__top {
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .header__top .header__logo {
+    display: none;
+  }
+
+  .header__top-nav {
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    justify-content: flex-end;
+  }
+
+  .header__top-nav-list {
+    margin-right: auto;
+  }
+
+  .header__nav {
+    position: fixed;
+    background-color: #18191A;
+    width: 500px;
+    height: 100vh;
+    right: 0;
+    top: 0;
+    box-shadow: 0 -10px 10px 5px rgba(0, 0, 0, 0.6);
+    transform: translateX(100%);
+    transition: transform .2s ease-out;
+  }
+
+  .header__nav.active {
+    transform: translateX(0);
+  }
+
+  .header__nav-list {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .header__nav-item {
+    padding: 15px 0;
+  }
+
+  .header__nav-link {
+    font-size: 1.3em;
+  }
+
+  .header__nav-close {
+    display: flex;
+  }
+
+  .greet {
+    padding-top: 80px;
+  }
+
+  .greet {
+    padding-top: 40px;
+  }
+
+  .greet__title {
+    font-size: 80px;
+  }
+
+  .new-wine__info {
+    width: 400px;
+  }
+
+  .new-wine .item__title {
+    font-size: 50px;
+  }
+
+  .new-wine .item__creator {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .new-wine .item__description {
+    font-size: 14px;
+    padding-right: 10px;
+    margin-bottom: 40px;
+  }
+
+  .new-wine .item__description {
+    margin-bottom: 20px;
+  }
+
+  .new-wine .item__more {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    justify-content: center;
+  }
+
+  .new-wine .item__button-more {
+    margin: 0 20px;
+  }
+
+  .new-wine .slider {
+    width: 300px;
+    height: 300px;
+  }
+
+  .new-wine .slider::before {
+    width: 150px;
+    height: 150px;
+  }
+
+  .new-wine .slider .prev {
+    left: 10px;
+  }
+
+  .new-wine .slider .next {
+    right: 10px;
+  }
 }
 
-ul {
-  list-style: none;
+@media screen and (max-width: 768px) {
+  .header__top-nav-item {
+    margin-left: 5px;
+    margin-right: 30px;
+  }
+
+  .header__top-search,
+  .header__top-bag {
+    margin-left: 30px;
+  }
+
+  .header__burger-menu {
+    margin-left: 30px;
+  }
+
+  .greet__subtitle {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .greet__title {
+    font-size: 60px;
+  }
+
+  .greet__description {
+    font-size: 14px;
+  }
+
+  .greet__wine-img {
+    width: 60vw;
+  }
+
+  .new-wine {
+    padding-top: 60px;
+    padding-bottom: 130px;
+  }
+
+  .new-wine .item__button-more {
+    min-width: 0;
+    width: 160px;
+    padding: 18px 30px;
+    font-size: 18px;
+  }
+
+  .new-wine .slider {
+    width: 200px;
+    border-width: 3px;
+  }
+
+  .new-wine .slider::before {
+    width: 150px;
+    height: 150px;
+  }
+
+  .new-wine .slider__button {
+    background-color: transparent;
+    font-size: 16px;
+  }
+
+  .new-wine .slider .prev {
+    transform: none;
+    top: initial;
+    bottom: 80px;
+    left: 30%;
+  }
+
+  .new-wine .slider .next {
+    transform: none;
+    top: initial;
+    bottom: 80px;
+    right: 30%;
+  }
 }
 
-button, button:focus {
-  outline: none;
-}
+@media screen and (max-width: 576px) {
+  .header__top-nav-item {
+    margin-left: 5px;
+    margin-right: 15px;
+  }
 
-html {
-  font-size: 16px;
-  font-family: Poppins;
-}
+  .header__top-search,
+  .header__top-bag {
+    margin-left: 15px;
+  }
 
-body {
-  font-family: ChocolateBox;
-  font-size: 14px;
-}
+  .header__burger-menu {
+    margin-left: 15px;
+  }
 
-body .container {
-  max-width: 1190px;
-  padding: 0 17px;
-  margin: 0 auto;
-}
+  .header__nav {
+    width: 100vw;
+  }
 
-body h2 {
-  font-family: 'Poppins';
-  font-weight: 400;
-  color: #E2B024;
+  .greet__subtitle {
+    font-size: 16px;
+    margin-bottom: 6px;
+  }
+
+  .greet__title {
+    font-size: 36px;
+  }
+
+  .greet__description {
+    font-size: 12px;
+  }
+
+  .greet__read-more {
+    font-size: 14px;
+  }
+
+  .new-wine .item__button-more {
+    min-width: 0;
+    width: 160px;
+    padding: 18px 0;
+    font-size: 16px;
+  }
+
+  .new-wine .slider {
+    border: none;
+    width: 100px;
+    position: static;
+    align-self: center;
+    margin-top: 20px;
+  }
+
+  .new-wine .slider::before {
+    display: none;
+  }
+
+  .new-wine .slider__button {
+    font-size: 16px;
+  }
 }

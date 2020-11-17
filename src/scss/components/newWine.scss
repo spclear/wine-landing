@@ -1,6 +1,5 @@
 @import '../common/colors.scss';
 @import '../common/text.scss';
-@import '../common/fonts.scss';
 
 .new-wine {
   background-color: $dark-gray;
@@ -8,9 +7,23 @@
   color: $white;
   font-family: Poppins;
 
+  @media screen and (max-width: $extra-large) {
+    padding: 110px 0 150px;
+    position: relative;
+  }
+  @media screen and (max-width: $medium) {
+    padding-top: 60px;
+    padding-bottom: 130px;
+  }
+  
+
   &__container {
     display: flex;
     justify-content: space-between;
+
+    @media screen and (max-width: $extra-large) {
+      justify-content: space-evenly;
+    }    
   }
 
   &__title {
@@ -23,6 +36,14 @@
 
   &__info {
     width: 530px;
+    
+    @media screen and (max-width: $extra-large) {
+      width: 480px;
+    }
+
+    @media screen and (max-width: $large) {
+      width: 400px;
+    }
   }
 
   .item {
@@ -34,23 +55,59 @@
       font-family: ChocolateBox;
       font-weight: normal;
       color: $yellow;
-      @include text-config(74px, 43px, 12px)
+      @include text-config(74px, 43px, 12px);
+
+      @media screen and (max-width: $extra-large) {
+        font-size: 68px;
+        margin-bottom: 10px;
+      }
+
+      @media screen and (max-width: $large) {
+        font-size: 50px;
+      }
     }
     
     &__creator {
       font-weight: 400;
       @include text-config(36px, 170%, 52px);
+
+      @media screen and (max-width: $extra-large) {
+        margin-bottom: 40px;
+        font-size: 30px;
+      }
+
+      @media screen and (max-width: $large) {
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
     }
 
     &__description {
       font-weight: 300;
-      @include text-config(18px, 200%, 64px)
+      @include text-config(18px, 200%, 64px);
+
+      @media screen and (max-width: $large) {
+        font-size: 14px;
+        padding-right: 10px;
+        margin-bottom: 40px;
+      }
+      @media screen and (max-width: $large) {
+        margin-bottom: 20px;
+      }
     }
 
     &__more {
       display: flex;
       justify-content: space-between;
       align-items: center;
+
+      @media screen and (max-width: $large) {
+        position: absolute;
+        bottom: 20px;
+        left: 0;
+        right: 0;
+        justify-content: center;
+      }      
     }
 
     &__button-more {
@@ -58,11 +115,30 @@
       min-width: 230px;
       text-align: center;
       font-weight: 500;
-      @include text-config(24px, 100%, 0);
       background-color: transparent;
       border: 1px solid $yellow;
       color: $white;
       transition: background-color .3s, color .3s;
+      
+      @include text-config(24px, 100%, 0);
+      
+      @media screen and (max-width: $large) {
+        margin: 0 20px;
+      }
+
+      @media screen and (max-width: $medium) {
+        min-width: 0;
+        width: 160px;
+        padding: 18px 30px;
+        font-size: 18px;
+      }
+
+      @media screen and (max-width: $small) {
+        min-width: 0;
+        width: 160px;
+        padding: 18px 0;
+        font-size: 16px;
+      }
 
       &:hover {
         background-color: $yellow;
@@ -81,6 +157,29 @@
     align-items: center;
     justify-content: center;
 
+    @media screen and (max-width: $extra-large) {
+      width: 380px;
+      height: 380px;
+      border-width: 5px;
+    }
+
+    @media screen and (max-width: $large) {
+      width: 300px;
+      height: 300px;
+    }
+
+    @media screen and (max-width: $medium) {
+      width: 200px;
+      border-width: 3px;
+    }
+
+    @media screen and (max-width: $small) {
+      border: none;
+      width: 100px;
+      position: static;
+      align-self: center;
+      margin-top: 20px;
+    }
 
     &::before {
       content: '';
@@ -92,10 +191,42 @@
       left: 50%;
       transform: translate(-50%, -50%);
       border-radius: 50%;
+
+      @media screen and (max-width: $extra-large) {
+        width: 250px;
+        height: 250px;
+      }
+
+      @media screen and (max-width: $large) {
+        width: 150px;
+        height: 150px;
+      }
+
+      @media screen and (max-width: $medium) {
+        width: 150px;
+        height: 150px;
+      }
+
+      @media screen and (max-width: $small) {
+        display: none;
+      }
     }
 
     &__content-image {
       z-index: 20;
+
+      @media screen and (max-width: $extra-large) {
+        height: 500px;
+      }
+
+      @media screen and (max-width: $extra-large) {
+        height: 350px;
+      }
+
+      @media screen and (max-width: $extra-large) {
+        height: 280px;
+      }
+      
     }
 
     &__button {
@@ -108,6 +239,14 @@
       padding-bottom: 10px;
 
       @include text-config(20px, 60px, 0);
+
+      @media screen and (max-width: $medium) {
+        background-color: transparent;
+        font-size: 16px;
+      }
+      @media screen and (max-width: $small) {
+        font-size: 16px;
+      }
 
       &:hover {
         color: $yellow;
@@ -125,6 +264,7 @@
         width: 100%;
         height: 1px;
         background-color: $white;
+
       } 
     }
 
@@ -132,12 +272,34 @@
       left: 0;
       top: 50%;
       transform: translate(-60%, -50%);
+      
+      @media screen and (max-width: $large) {
+        left: 10px;
+      }
+
+      @media screen and (max-width: $medium) {
+        transform: none;
+        top: initial;
+        bottom: 80px;
+        left: 30%;
+      }
     }
 
     .next {
       right: 0;
       top: 50%;
       transform: translate(60%, -50%);
+      
+      @media screen and (max-width: $large) {
+        right: 10px;
+      }
+
+      @media screen and (max-width: $medium) {
+        transform: none;
+        top: initial;
+        bottom: 80px;
+        right: 30%;
+      }
     }
   }
 }

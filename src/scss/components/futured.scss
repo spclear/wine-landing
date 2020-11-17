@@ -1,5 +1,4 @@
 @import '../common/colors.scss';
-@import '../common/fonts.scss';
 @import '../common/text.scss';
 
 .futured {
@@ -54,7 +53,7 @@
       transition: color .3s;
       @include text-config(24px, 36px, 0);
       
-      &:hover {
+      &:hover, &_active {
         color: $yellow;
       }
     }
