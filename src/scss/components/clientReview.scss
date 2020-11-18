@@ -12,6 +12,18 @@
   color: $white;
   font-family: 'Poppins';
 
+  @media screen and (max-width: $extra-large) {
+    padding: 100px 0 90px;
+  }
+
+  @media screen and (max-width: $medium) {
+    padding: 80px 0 60px;
+  }
+
+  @media screen and (max-width: $small) {
+    padding: 50px 0 50px;
+  }
+
   &__container {
     display: flex;
     flex-direction: column;
@@ -23,6 +35,16 @@
     font-family: 'ChocolateBox';
     color: $white;
     @include text-config(48px, 28px, 58px);
+
+    @media screen and (max-width: $medium) {
+      font-size: 40px;
+      margin-bottom: 40px;
+    }
+
+    @media screen and (max-width: $small) {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
 
     span {
       color: $yellow;
@@ -43,6 +65,12 @@
         overflow: hidden;
         margin-bottom: 30px;
         box-shadow: 0 1px 10px rgba(0, 0, 0, .1);
+
+        @media screen and (max-width: $small) {
+          margin-bottom: 20px;
+          width: 120px;
+          height: 120px;
+        }
       }
 
       &__photo {
@@ -52,12 +80,33 @@
 
       &__client-name {
         @include text-config(24px, 170%, 30px);
+
+        @media screen and (max-width: $extra-large) {
+          margin-bottom: 20px;
+        }
+
+        @media screen and (max-width: $medium) {
+          margin-bottom: 15px;
+        }
       }
 
       &__client-review {
         text-align: center;
         width: 1000px;
         @include text-config(16px, 28px, 20px);
+
+        @media screen and (max-width: $extra-large) {
+          width: 80%;
+        }
+
+        @media screen and (max-width: $medium) {
+            width: 90%;
+        }
+
+        @media screen and (max-width: $small) {
+          font-size: 14px;
+          line-height: 20px;
+        }
       }
     }
   }

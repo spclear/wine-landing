@@ -6,6 +6,15 @@
   padding: 150px 0;
   color: $white;
 
+  @media screen and (max-width: $large) {
+    padding: 80px 0;
+    overflow-x: hidden;
+  }
+
+  @media screen and (max-width: $small) {
+    padding: 50px 0;
+  }
+
   &__container {
     display: flex;
     flex-direction: column;
@@ -18,6 +27,15 @@
     color: $white;
     text-align: center;
     @include text-config(48px, 28px, 90px);
+
+    @media screen and (max-width: $medium) {
+      font-size: 36px;
+      margin-bottom: 50px;
+    }
+
+    @media screen and (max-width: $medium) {
+      font-size: 24px;
+    }
     
     span {
       color: $yellow;
@@ -28,6 +46,18 @@
     width: 420px;
     margin-bottom: 90px;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media screen and (max-width: $large) {
+      margin-bottom: 60px;
+    }
+
+    @media screen and (max-width: $small) {
+      width: 90%;
+    }
+
 
     &::after {
       content: '';
@@ -43,6 +73,12 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+
+      @media screen and (max-width: $small) {
+        justify-content: space-evenly;
+        padding: 0 15px;
+        flex-wrap: wrap;
+      }
     }
 
     &-item {
@@ -52,6 +88,11 @@
       cursor: pointer;
       transition: color .3s;
       @include text-config(24px, 36px, 0);
+
+      @media screen and (max-width: $small) {
+        font-size: 18px;
+        line-height: 24px;
+      }
       
       &:hover, &_active {
         color: $yellow;
@@ -63,7 +104,15 @@
     display: flex;
     flex-wrap: wrap;
     align-content: center;
-    justify-content: space-between;
+    justify-content: center;
+    
+    @media screen and (max-width: $medium) {
+      justify-content: space-between;
+    }
+
+    @media screen and (max-width: $medium) {
+      justify-content: center;
+    }
   }
 
   &__item {
@@ -75,6 +124,29 @@
     justify-content: space-between;
     margin-bottom: 100px;
     position: relative;
+    overflow: hidden;
+
+    @media screen and (max-width: $extra-large) {
+      max-width: 30%;
+      flex-shrink: 0;
+      flex-basis: 30%;
+    }
+
+    @media screen and (max-width: $large) {
+      max-width: 50%;
+      flex-basis: 40%;
+      margin-bottom: 80px;
+    }
+
+    @media screen and (max-width: $medium) {
+      flex-basis: 48%;
+      margin-bottom: 50px;
+    }
+
+    @media screen and (max-width: $small) {
+      flex-basis: 80%;
+      max-width: 100%;
+    }
 
     &-image {
       height: 350px;
@@ -85,6 +157,15 @@
       align-self: flex-start;
       padding-left: 40px;
       @include text-config(24px, 14px, 10px);
+
+      @media screen and (max-width: $large) {
+        align-self: center;
+        padding-left: 0;
+      }
+
+      @media screen and (max-width: $medium) {
+        font-size: 20px;
+      }
     }
     
     &-price {
@@ -96,6 +177,21 @@
       align-items: center;
       color: $yellow;
       @include text-config(24px, 36px, 0);
+
+      @media screen and (max-width: $large) {
+        align-self: center;
+        padding-left: 0;
+      }
+
+      @media screen and (max-width: $medium) {
+        font-size: 20px;
+        line-height: 28px;
+      }
+
+      @media screen and (max-width: $small) {
+        font-size: 18px;
+        line-height: 24px;
+      }
     }
 
     &-discount {

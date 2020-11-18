@@ -6,6 +6,18 @@
   color: $white;
   padding: 160px 0 155px;
 
+  @media screen and (max-width: $extra-large) {
+    padding: 100px 0 90px;
+  }
+
+  @media screen and (max-width: $medium) {
+    padding: 80px 0 60px;
+  }
+
+  @media screen and (max-width: $small) {
+    padding: 50px 0 50px;
+  }
+
   &__container {
     display: flex;
     flex-direction: column;
@@ -17,6 +29,16 @@
     font-family: 'ChocolateBox';
     color: $white;
     @include text-config(48px, 28px, 100px);
+
+    @media screen and (max-width: $medium) {
+      font-size: 40px;
+      margin-bottom: 40px;
+    }
+
+    @media screen and (max-width: $small) {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
 
     span {
       color: $yellow;
@@ -30,6 +52,10 @@
       justify-content: center;
       margin-bottom: 50px;
 
+      @media screen and (max-width: $small) {
+        flex-direction: column;
+      }
+
       .item {
         width: 370px;
         height: 560px;
@@ -37,30 +63,101 @@
         position: relative;
         cursor: pointer;
 
+        @media screen and (max-width: $extra-large) {
+          width: 30%;
+          height: 500px;
+        }
+
+        @media screen and (max-width: $medium) {
+          height: 340px;
+        }
+
+        @media screen and (max-width: $small) {
+          padding: 20px 0;
+          height: auto;
+          width: 100%;
+          text-align: center;
+        }
+
+        &:hover {
+          @media screen and (max-width: $small) {
+            .item__image {
+              opacity: 1;
+              display: block;
+            }
+          }
+        }
+
         &_active {
           height: 637px;
+
+          @media screen and (max-width: $small) {
+            height: auto;
+          }
         }
 
         &__image {
           height: 100%;
           width: 100%;
+
+          @media screen and (max-width: $small) {
+            display: none;
+            opacity: 0;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 0 0 10px 2px rgba(0, 0, 0, .6);
+            border: 1px solid $yellow;
+            width: 90vw;
+            height: auto;
+            z-index: 20;
+            transition: opacity .6s;
+          }
         }
 
         &__info {
           position: absolute;
           bottom: 25px;
           left: 25px;
+          
+          @media screen and (max-width: $large) {
+            left: 5px;
+          }
+
+          @media screen and (max-width: $small) {
+            position: static;
+          }
         }
 
         &__title {
           font-weight: 300;
           @include text-config(24px, 14px, 10px);
+
+          @media screen and (max-width: $large) {
+            font-size: 20px;
+            margin-bottom: 5px;
+          }
+
+          @media screen and (max-width: $medium) {
+            font-size: 16px;
+          }
         }
 
         &__price {
           font-family: 'Poppins';
           font-weight: 700;
           @include text-config(36px, 54px, 0);
+
+          @media screen and (max-width: $large) {
+            font-size: 28px;
+            line-height: 36px;
+          }
+
+          @media screen and (max-width: $medium) {
+            font-size: 20px;
+            line-height: 28px;
+          }
         }
       }
     }
