@@ -112,8 +112,8 @@
     @media screen and (max-width: $small) {
       margin: 0 auto;
       margin-top: 10px;
-      height: 40px;
-      width: 55%;
+      width: auto;
+      padding: 10px 30px;
     }
 
     &:hover span {

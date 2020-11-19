@@ -7,6 +7,14 @@
   color: $white;
   font-family: 'Poppins';
 
+  @media screen and (max-width: $extra-large) {
+    padding-top: 80px;
+  }
+
+  @media screen and (max-width: $large) {
+    padding: 80px 0;
+  }
+
   &__container {
     display: flex;
     flex-direction: column;
@@ -19,6 +27,15 @@
     color: $white;
     @include text-config(48px, 28px, 100px);
 
+    @media screen and (max-width: $large) {
+      font-size: 36px;
+      margin-bottom: 50px;
+    }
+
+    @media screen and (max-width: $small) {
+      font-size: 28px;
+    }
+
     span {
       color: $yellow;
     }
@@ -27,19 +44,58 @@
   &__content {
     display: flex;
     width: 100%;
+
+    @media screen and (max-width: $extra-large) {
+      width: 95%;
+    }
+
+    @media screen and (max-width: $large) {
+      flex-direction: column-reverse;
+      align-items: stretch;
+    }
   }
 
   .details {
     width: 470px;
     margin-right: 35px;
 
+    @media screen and (max-width: $extra-large) {
+      width: 420px;
+    }
+
+    @media screen and (max-width: $large) {
+      margin-right: 0;
+      width: 100%;
+      margin-top: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
     &__info {
       font-weight: 300;
       @include text-config(18px, 200%, 77px);
+
+      @media screen and (max-width: $extra-large) {
+        font-size: 16px;
+        margin-bottom: 40px;
+      }
+
+      @media screen and (max-width: $large) {
+        text-align: center;
+      }
     }
 
     &__contacts {
       margin-bottom: 60px;
+
+      @media screen and (max-width: $extra-large) {
+        margin-bottom: 40px;
+      }
+
+      @media screen and (max-width: $large) {
+        margin-bottom: 20px;
+      }
 
       &-list-item {
         display: flex;
@@ -47,8 +103,20 @@
         font-weight: 300;
         @include text-config(18px, 170%, 42px);
 
+        @media screen and (max-width: $extra-large) {
+          margin-bottom: 24px;
+        }
+
+        @media screen and (max-width: $small) {
+          font-size: 14px;
+        }
+
         span {
           margin-left: 30px;
+
+          @media screen and (max-width: $small) {
+            margin-left: 15px;
+          }
         }
       }
     }
@@ -57,8 +125,18 @@
       display: flex;
       align-items: center;
 
+      @media screen and (max-width: $small) {
+        justify-content: space-evenly;
+        width: 100%;
+      }
+
       &__item {
         margin-right: 56px;
+
+        @media screen and (max-width: $small) {
+          margin-right: 0;
+        }
+
         &:hover{
           animation: swing .6s;
         }
@@ -68,6 +146,14 @@
         font-size: 48px;
         color: $yellow;
         cursor: pointer;
+
+        @media screen and (max-width: $extra-large) {
+          font-size: 36px;
+        }
+
+        @media screen and (max-width: $small) {
+          font-size: 24px;
+        }      
       }
     }
   }
@@ -83,6 +169,16 @@
     height: 65px;
     padding: 20px 25px;
 
+    @media screen and (max-width: $extra-large) {
+      height: 60px;
+      padding: 15px 25px;
+    }
+
+    @media screen and (max-width: $small) {
+      height: 50px;
+      padding: 15px;
+    }
+
     label {
       position: absolute;
       left: 40px;
@@ -91,6 +187,15 @@
       padding: 0 7px;
       cursor: pointer;
       @include text-config(24px, 36px, 0);
+
+      @media screen and (max-width: $extra-large) {
+        font-size: 20px;
+      }
+
+      @media screen and (max-width: $small) {
+        font-size: 14px;
+        left: 20px;
+      }
     }
   }
   
@@ -105,6 +210,11 @@
     font-family: 'Poppins';
     
     @include text-config(18px, 24px, 0);
+
+    @media screen and (max-width: $small) {
+      font-size: 16px;
+      line-height: 20px;
+    }
   }
 
   .form-textarea {
@@ -137,8 +247,24 @@
     outline: none;
     transition: background-color .3s, color .3s;
     cursor: pointer;
-    
     @include text-config(36px, 170%, 0);
+
+    @media screen and (max-width: $extra-large) {
+      width: 160px;
+      height: 60px;
+      font-size: 30px;
+    }
+    
+    @media screen and (max-width: $large) {
+      margin: 0 auto;
+      width: 200px;
+    }
+
+    @media screen and (max-width: $small) {
+      font-size: 24px;
+      width: 160px;
+      height: 50px;
+    }
 
     &:hover {
       color: $yellow;

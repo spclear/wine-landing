@@ -80,12 +80,12 @@
         }
 
         &:hover {
-          @media screen and (max-width: $small) {
-            .item__image {
-              opacity: 1;
-              display: block;
-            }
-          }
+          // @media screen and (max-width: $small) {
+          //   .item__image {
+          //     opacity: 1;
+          //     display: block;
+          //   }
+          // }
         }
 
         &_active {
