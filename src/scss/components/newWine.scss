@@ -47,14 +47,19 @@
   }
 
   .item {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    display: none;
+    
+    &.active {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
 
     &__title {
       font-family: ChocolateBox;
       font-weight: normal;
       color: $yellow;
+      animation: fadeIn 1s;
       @include text-config(74px, 43px, 12px);
 
       @media screen and (max-width: $extra-large) {
@@ -73,6 +78,7 @@
     
     &__creator {
       font-weight: 400;
+      animation: fadeIn 1s;
       @include text-config(36px, 170%, 52px);
 
       @media screen and (max-width: $extra-large) {
@@ -92,6 +98,7 @@
 
     &__description {
       font-weight: 300;
+      animation: fadeIn 1s;
       @include text-config(18px, 200%, 64px);
 
       @media screen and (max-width: $large) {
@@ -189,11 +196,11 @@
       margin-top: 20px;
     }
 
-    &::before {
+    &::after {
       content: '';
       position: absolute;
-      width: 374px;
-      height: 374px;
+      width: 320px;
+      height: 320px;
       background-color: $yellow;
       top: 50%;
       left: 50%;
@@ -220,8 +227,18 @@
       }
     }
 
-    &__content-image {
+    &__content {
       z-index: 20;
+    }
+
+    &__content-image {
+      display: none;
+      height: 300px;
+
+      &.active {
+        display: block;
+        animation: fadeIn .5s;
+      }
 
       @media screen and (max-width: $extra-large) {
         height: 500px;
@@ -245,6 +262,7 @@
       color: $white;
       font-weight: 500;
       padding-bottom: 10px;
+      z-index: 30;
 
       @include text-config(20px, 60px, 0);
 
@@ -263,8 +281,24 @@
         color: $yellow;
         cursor: pointer;
 
+        @media screen and (max-width: $medium) {
+          color: $black;
+        }
+
+        @media screen and (max-width: $medium) {
+          color: $yellow;
+        }
+
         &::before {
           background-color: $yellow;
+
+          @media screen and (max-width: $medium) {
+            background-color: $black;
+          }
+
+          @media screen and (max-width: $small) {
+            background-color: $yellow;
+          }
         }
       }
 
@@ -280,7 +314,7 @@
           background-color: $black;
         }
 
-        @media screen and (max-width: $medium) {
+        @media screen and (max-width: $small) {
           background-color: $white;
         }
 

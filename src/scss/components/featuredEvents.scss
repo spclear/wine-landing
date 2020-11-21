@@ -46,10 +46,15 @@
     
 
     .item {
-      display: flex;
-      align-items: stretch;
+      display: none;
       min-height: 410px;
       position: relative;
+
+      &.active {
+        display: flex;
+        align-items: stretch;
+        animation: fadeIn .5s;
+      }
 
       @media screen and (max-width: $large) {
         text-align: center;
@@ -147,6 +152,9 @@
 
       @media screen and (max-width: 1500px) {
         transform: none;
+      }
+
+      @media screen and (max-width: 1350px) {
         top: 105%;
       }
 

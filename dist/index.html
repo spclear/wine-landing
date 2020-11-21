@@ -53,7 +53,7 @@
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M14.7422 20.0004H5.25778C2.90569 20.0004 1 18.0954 1 15.7454V10.2294C1 7.87937 2.90569 5.97437 5.25778 5.97437H14.7422C17.0943 5.97437 19 7.87937 19 10.2294V15.7454C19 18.0954 17.0943 20.0004 14.7422 20.0004Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                     </a>
-                    <div class="header__burger-menu">
+                    <div id="burger" class="header__burger-menu">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -61,7 +61,7 @@
                 </nav>
             </div>
             <nav class="header__nav">
-                <div class="header__nav-close">
+                <div id="close" class="header__nav-close">
                     &times;
                 </div>
                 <ul class="header__nav-list">
@@ -119,33 +119,60 @@
         <div class="container new-wine__container">
             <div class="new-wine__info">
                 <h4 class="new-wine__title">New Wines</h4>
-                <div class="new-wine__item-info item">
-                    <h2 class="item__title">Merlot</h2>
-                    <h3 class="item__creator">Winehouse Vineyard</h3>
-                    <p class="item__description">
-                        Merlot is loved for its
-                        boisterous black cherry
-                        flavors, supple
-                        tannins, and chocolatey
-                        finish. On the high end, it’s
-                        often
-                        mistaken with Cabernet
-                        Sauvignon.
-                    </p>
-                    <div class="item__more">
-                        <button class="item__button-more">
-                            Learn more
-                        </button>
-                        <button class="item__button-more">
-                            View more
-                        </button>
+                <div class="new-wine__content">
+                    <div class="new-wine__item-info item">
+                        <h2 class="item__title">Merlot</h2>
+                        <h3 class="item__creator">Winehouse Vineyard</h3>
+                        <p class="item__description">
+                            Merlot is loved for its
+                            boisterous black cherry
+                            flavors, supple
+                            tannins, and chocolatey
+                            finish. On the high end, it’s
+                            often
+                            mistaken with Cabernet
+                            Sauvignon.
+                        </p>
+                        <div class="item__more">
+                            <button class="item__button-more">
+                                Learn more
+                            </button>
+                            <button class="item__button-more">
+                                View more
+                            </button>
+                        </div>
+                    </div>
+                    <div class="new-wine__item-info item">
+                        <h2 class="item__title">Mazzei Siepi</h2>
+                        <h3 class="item__creator">Lorem Ipsum</h3>
+                        <p class="item__description">
+                            Mazzei Siepi is loved for its
+                            boisterous black cherry
+                            flavors, supple
+                            tannins, and chocolatey
+                            finish. On the high end, it’s
+                            often
+                            mistaken with Cabernet
+                            Sauvignon.
+                        </p>
+                        <div class="item__more">
+                            <button class="item__button-more">
+                                Learn more
+                            </button>
+                            <button class="item__button-more">
+                                View more
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="new-wine__preview-slider slider">
                 <button class="slider__button prev">Prev</button>
                 <button class="slider__button next">Next</button>
-                <img class="slider__content-image" src="assets/img/content/new-wine-1.png" alt="merlot wine">
+                <div class="slider__content">
+                    <img class="slider__content-image" src="assets/img/content/new-wine-1.png" alt="merlot wine">
+                    <img class="slider__content-image" src="assets/img/content/futured-3.png" alt="merlot wine">
+                </div>
             </div>
         </div>
     </section>
@@ -279,29 +306,94 @@
                 Client <span>Review</span>
             </h2>
             <div class="review__slider slider">
-                <div class="review__item item">
-                    <div class="item__client-photo">
-                        <img src="assets/img/content/client-photo1.jpg" alt="client photo" class="item__photo">
+                <div class="review__slider-content">
+                    <div class="review__item item">
+                        <div class="item__client-photo">
+                            <img src="assets/img/content/client-photo1.jpg" alt="client photo" class="item__photo">
+                        </div>
+                        <h3 class="item__client-name">
+                            David Luice
+                        </h3>
+                        <p class="item__client-review">
+                            Lorem ipsum dolor sit amet,
+                            consectetur adipiscing elit.
+                            Eget lectus pulvinar venenatis
+                            volutpat, lacinia sagittis.
+                            Vulputate habitasse vel nisl,
+                            id consequat lacus. Et
+                            porttitor vestibulum, blandit
+                            quam id. Accumsan lacus,
+                            non tincidunt sed pellentesque
+                            facilisi ornare pellentesque
+                            ullamcorpe
+                        </p>
                     </div>
-                    <h3 class="item__client-name">
-                        David Luice
-                    </h3>
-                    <p class="item__client-review">
-                        Lorem ipsum dolor sit amet,
-                        consectetur adipiscing elit.
-                        Eget lectus pulvinar venenatis
-                        volutpat, lacinia sagittis.
-                        Vulputate habitasse vel nisl,
-                        id consequat lacus. Et
-                        porttitor vestibulum, blandit
-                        quam id. Accumsan lacus,
-                        non tincidunt sed pellentesque
-                        facilisi ornare pellentesque
-                        ullamcorpe
-                    </p>
+                    <div class="review__item item">
+                        <div class="item__client-photo">
+                            <img src="assets/img/content/client-photo1.jpg" alt="client photo" class="item__photo">
+                        </div>
+                        <h3 class="item__client-name">
+                            David Luice
+                        </h3>
+                        <p class="item__client-review">
+                            Lorem ipsum dolor sit amet,
+                            consectetur adipiscing elit.
+                            Eget lectus pulvinar venenatis
+                            volutpat, lacinia sagittis.
+                            Vulputate habitasse vel nisl,
+                            id consequat lacus. Et
+                            porttitor vestibulum, blandit
+                            quam id. Accumsan lacus,
+                            non tincidunt sed pellentesque
+                            facilisi ornare pellentesque
+                            ullamcorpe
+                        </p>
+                    </div>
+                    <div class="review__item item">
+                        <div class="item__client-photo">
+                            <img src="assets/img/content/client-photo1.jpg" alt="client photo" class="item__photo">
+                        </div>
+                        <h3 class="item__client-name">
+                            David Luice
+                        </h3>
+                        <p class="item__client-review">
+                            Lorem ipsum dolor sit amet,
+                            consectetur adipiscing elit.
+                            Eget lectus pulvinar venenatis
+                            volutpat, lacinia sagittis.
+                            Vulputate habitasse vel nisl,
+                            id consequat lacus. Et
+                            porttitor vestibulum, blandit
+                            quam id. Accumsan lacus,
+                            non tincidunt sed pellentesque
+                            facilisi ornare pellentesque
+                            ullamcorpe
+                        </p>
+                    </div>
+                    <div class="review__item item">
+                        <div class="item__client-photo">
+                            <img src="assets/img/content/client-photo1.jpg" alt="client photo" class="item__photo">
+                        </div>
+                        <h3 class="item__client-name">
+                            David Luice
+                        </h3>
+                        <p class="item__client-review">
+                            Lorem ipsum dolor sit amet,
+                            consectetur adipiscing elit.
+                            Eget lectus pulvinar venenatis
+                            volutpat, lacinia sagittis.
+                            Vulputate habitasse vel nisl,
+                            id consequat lacus. Et
+                            porttitor vestibulum, blandit
+                            quam id. Accumsan lacus,
+                            non tincidunt sed pellentesque
+                            facilisi ornare pellentesque
+                            ullamcorpe
+                        </p>
+                    </div>
                 </div>
                 <div class="slider__nav">
-                    <div class="slider__nav-item slider__nav-item_active"></div>
+                    <div class="slider__nav-item active"></div>
                     <div class="slider__nav-item"></div>
                     <div class="slider__nav-item"></div>
                     <div class="slider__nav-item"></div>
@@ -385,6 +477,19 @@
                         </button>
                     </div>
                 </div>
+                <div class="slider__item item">
+                    <img src="assets/img/content/featured-2.jpg" alt="wine image" class="item__image">
+                    <div class="item__info">
+                        <h3 class="item__title">Lorem Ipsum Tasting</h3>
+                        <p class="item__date">27 Nov</p>
+                        <p class="item__description">
+                            Fugiat ut perferendis eum ipsa, ad quidem minus molestias ullam velit praesentium explicabo doloribus, nesciunt aperiam consectetur, commodi a minima asperiores.
+                        </p>
+                        <button class="item__read-more">
+                            Read more
+                        </button>
+                    </div>
+                </div>
                 <button class="next">
                     <i class="fas fa-angle-right"></i>
                 </button>
@@ -461,19 +566,19 @@
                         <label for="name" class="contact-us__field-label">
                             Name
                         </label>
-                        <input type="text" class="contact-us__form-input" name="name" id="name">
+                        <input type="text" class="contact-us__form-input" name="name" id="name" required>
                     </div>
                     <div class="contact-us__form-field">
                         <label for="email" class="contact-us__field-label">
                             Email
                         </label>
-                        <input type="email" class="contact-us__form-input" name="email" id="email">
+                        <input type="email" class="contact-us__form-input" name="email" id="email" required>
                     </div>
                     <div class="contact-us__form-field">
                         <label for="password" class="contact-us__field-label">
                             Password
                         </label>
-                        <input type="password" class="contact-us__form-input" name="password" id="password">
+                        <input type="password" class="contact-us__form-input" name="password" id="password" required>
                     </div>
                     <div class="contact-us__form-field form-textarea">
                         <label for="msg" class="contact-us__field-label">

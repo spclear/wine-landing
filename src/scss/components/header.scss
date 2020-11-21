@@ -115,9 +115,14 @@
     cursor: pointer;
     position: relative;
 
+    @media screen and (min-width: $large) {
+      display: none;
+    }
+
     @media screen and (max-width: $medium) {
       margin-left: 30px;
     }
+
     @media screen and (max-width: $small) {
       margin-left: 15px;
     }
@@ -132,6 +137,7 @@
     height: 55px;
     border-top: 1px solid rgba(255, 255, 255, 0.6);
     border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+    z-index: 1000;
     
     @media screen and (max-width: $large) {
       // display: none;
