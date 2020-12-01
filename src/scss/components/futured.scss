@@ -59,13 +59,18 @@
     }
 
 
-    &::after {
-      content: '';
+    .magic-line {
       position: absolute;
       bottom: 0;
       width: 100%;
-      height: 1px;
+      height: 2px;
       background-color: $white;
+
+      &__indicator {
+        height: 100%;
+        background-color: $yellow;
+        transition: transform .3s ease-in;
+      }
     }
 
     &-list {
@@ -76,7 +81,6 @@
 
       @media screen and (max-width: $small) {
         justify-content: space-evenly;
-        padding: 0 15px;
         flex-wrap: wrap;
       }
     }
@@ -87,6 +91,8 @@
       font-weight: 400;
       cursor: pointer;
       transition: color .3s;
+      flex-grow: 1;
+      text-align: center;
       @include text-config(24px, 36px, 0);
 
       @media screen and (max-width: $small) {
@@ -94,9 +100,14 @@
         line-height: 24px;
       }
       
-      &:hover, &_active {
+      &:hover {
         color: $yellow;
       }
+    }
+
+    .active {
+      color: $yellow;
+      transition: color .3s;
     }
   }
 
@@ -105,6 +116,7 @@
     flex-wrap: wrap;
     align-content: center;
     justify-content: center;
+    width: 100%;
     
     @media screen and (max-width: $medium) {
       justify-content: space-between;
@@ -226,6 +238,7 @@
     background: none;
     border: none;
     padding-bottom: 4px;
+    margin: 0 30%;
 
     @include text-config(18px, 10px, 0);
 

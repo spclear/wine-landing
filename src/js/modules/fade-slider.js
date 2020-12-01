@@ -12,7 +12,7 @@ export function configureFadeSlider(contentSelectors, prev, next) {
   itemsArr.forEach(arr => toggleActiveClass(arr, currIndex));
 
   if (!isSameArrLength(itemsArr)) {
-    console.log('Number of items for each selector is different!');
+    console.log('Number of items of each selector is not the same!');
     return;
   }
 
@@ -38,14 +38,14 @@ export function configureFadeSlider(contentSelectors, prev, next) {
 }
 
 function createMultiselectorsArray(contentSelectors) {
-  const contentArr = [];
+  const result = [];
 
   contentSelectors.forEach(selector => {
     let items = document.querySelectorAll(selector);
-    contentArr.push(items);
+    result.push(items);
   });
 
-  return contentArr;
+  return result;
 }
 
 // Check if all the inner arrays have the same length
@@ -53,7 +53,7 @@ function isSameArrLength(arr) {
   const length = arr[0].length;
 
   for (let i = 1; i < arr.length; i++) {
-    if (arr[i].length !== length) {
+    if (!Array.isArray(arr) || arr[i].length !== length) {
       return false;
     }
   }

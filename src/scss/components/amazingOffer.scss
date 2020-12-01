@@ -11,11 +11,11 @@
   }
 
   @media screen and (max-width: $medium) {
-    padding: 80px 0 60px;
+    padding: 80px 0 40px;
   }
 
   @media screen and (max-width: $small) {
-    padding: 50px 0 50px;
+    padding: 50px 0 0;
   }
 
   &__container {
@@ -45,7 +45,7 @@
     }
   }
 
-  .slider {
+  .content {
     &__items {
       display: flex;
       align-items: center;
@@ -79,18 +79,12 @@
           text-align: center;
         }
 
-        &:hover {
-          // @media screen and (max-width: $small) {
-          //   .item__image {
-          //     opacity: 1;
-          //     display: block;
-          //   }
-          // }
-        }
-
-        &_active {
+        &:nth-child(2) {
           height: 637px;
 
+          @media screen and (max-width: $medium) {
+            height: 340px;
+          }
           @media screen and (max-width: $small) {
             height: auto;
           }

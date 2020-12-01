@@ -1,8 +1,8 @@
 import { toggleActiveClass } from "../common/slider";
 
 export function configureCarousel(containerSelector, navItemSelector) {
-  const navItems = document.querySelectorAll(navItemSelector);
   const sliderContent = document.querySelector(containerSelector);
+  const navItems = document.querySelectorAll(navItemSelector);
 
   navItems.forEach((item, index) => {
     item.addEventListener('click', () => {

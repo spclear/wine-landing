@@ -1,7 +1,7 @@
 export function configureBurger() {
   const openButton = document.querySelector('#burger');
-  const menuBlock = document.querySelector('.header__nav');
   const closeButton = document.querySelector('.header__nav #close');
+  const menuBlock = document.querySelector('.header__nav');
 
   openButton.addEventListener('click', () => {
     menuBlock.classList.add('active');

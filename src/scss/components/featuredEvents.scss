@@ -11,6 +11,10 @@
     padding: 40px 0 120px;
   }
 
+  @media screen and (max-width: $small) {
+    padding: 20px 0 40px;
+  }
+
   &__container {
     display: flex;
     flex-direction: column;
@@ -43,7 +47,6 @@
   
   &__slider {
     position: relative;
-    
 
     .item {
       display: none;
@@ -62,7 +65,7 @@
         width: 90%;
         margin: 0 auto;
       }
-
+      
       &__image {
         width: 370px;
         object-fit: cover;
@@ -92,7 +95,11 @@
         }
 
         @media screen and (max-width: $medium) {
-          padding: 40px 40px;
+          padding: 40px;
+        }
+
+        @media screen and (max-width: $small) {
+          padding: 20px;
         }
 
       }

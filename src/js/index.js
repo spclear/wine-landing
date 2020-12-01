@@ -1,6 +1,7 @@
 import { configureBurger } from './modules/burger-menu';
 import { configureCarousel } from './modules/carousel-slider';
 import { configureFadeSlider } from './modules/fade-slider';
+import { filterItems } from './modules/wine-filters';
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -20,4 +21,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // Client Review slider
   configureCarousel('.review__slider-content', '.review .slider__nav-item');
 
+  // Futured Products filters
+  filterItems();
 });

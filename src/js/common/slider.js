@@ -1,9 +1,9 @@
-export function toggleActiveClass(array, itemIndex) {
+export function toggleActiveClass(array, itemIndex, activeClass = 'active') {
   array.forEach((item, index) => {
     if (itemIndex === index) {
-      item.classList.add('active');
+      item.classList.add(activeClass);
     } else {
-      item.classList.remove('active');
+      item.classList.remove(activeClass);
     }
   })
 }

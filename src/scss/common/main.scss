@@ -39,4 +39,12 @@ body {
     font-weight: 400;
     color: $yellow;
   }
+
+  .hide {
+    display: none;
+  }
+
+  .fade {
+    animation: fadeIn .3s;
+  }
 }
